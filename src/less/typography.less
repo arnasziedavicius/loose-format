@@ -1,0 +1,64 @@
+/*
+  Font Size Classes
+*/
+
+/* Body Text Font Size */
+.fs-b {
+  font-size: 1rem;
+  line-height: 1.24;
+}
+
+/* Small Font Size */
+.fs-sm {
+  font-size: 0.67rem;
+}
+
+/* Medium Font Size */
+.fs-md {
+  .mq-md({
+    font-size: 1.34rem;
+    line-height: 1.15;
+  });
+}
+
+/* Large Font Size */
+.fs-lg {
+  font-size: 1.34rem;
+  line-height: 1.15;
+
+  .mq-md({
+    font-size: 2.422rem;
+  });
+}
+
+/*
+  Global Type Styles
+*/
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+h1, h2, h3 {
+  .fs-b;
+}
+
+b, strong {
+  font-weight: normal;
+}
+
+a {
+  color: @black;
+  text-decoration: none;
+}

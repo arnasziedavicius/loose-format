@@ -1,0 +1,71 @@
+/*
+  Colours
+*/
+
+@black: #000000;
+@white: #ffffff;
+
+/*
+  Transitions
+*/
+
+@transSpeed: .25s;
+@transEase: cubic-bezier(0.77,  0,  0.175,  1);
+
+/*
+  Media Queries
+*/
+
+.mq-xsm(@rules) {
+	@media only screen and (min-width: 414px) {
+		@rules();
+	}
+}
+
+.mq-sm(@rules) {
+	@media only screen and (min-width: 768px) {
+		@rules();
+	}
+}
+
+.mq-sm-over(@rules) {
+	@media only screen and (max-width: 767px) {
+		@rules();
+	}
+}
+
+.mq-md(@rules) {
+	@media only screen and (min-width: 992px) {
+		@rules();
+	}
+}
+
+.mq-lg(@rules) {
+	@media only screen and (min-width: 1280px) {
+		@rules();
+	}
+}
+
+.mq-xl(@rules) {
+	@media only screen and (min-width: 1600px) {
+		@rules();
+	}
+}
+
+.mq-retina(@rules) {
+  @media only screen and (-webkit-min-device-pixel-ratio:2),
+  only screen and (min--moz-device-pixel-ratio:2),
+  only screen and (-o-min-device-pixel-ratio:2/1),
+  only screen and (min-device-pixel-ratio:2),
+  only screen and (min-resolution:192dpi),
+  only screen and (min-resolution:2dppx) {
+    @rules();
+  }
+}
+
+/*
+  Layout
+*/
+
+@off: 108px;
+@off--mob: 28px;
