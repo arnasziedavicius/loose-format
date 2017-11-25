@@ -30,7 +30,7 @@ export default {
     font-size: 18px;
     width: 100%;
     min-height: 100%;
-    height: auto;    
+    height: auto;
   }
 
   ::-webkit-input-placeholder {
