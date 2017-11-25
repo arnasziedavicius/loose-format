@@ -1,5 +1,6 @@
 .DS_Store
 node_modules/
+<<<<<<< HEAD
 /dist/
 npm-debug.log*
 yarn-debug.log*
@@ -12,3 +13,9 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+=======
+public/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+>>>>>>> 6d212ebb2c5de1e4848f705d91f2545102d7fb76
