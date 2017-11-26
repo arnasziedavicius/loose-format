@@ -9,6 +9,11 @@ function resolve (dir) {
 }
 
 module.exports = {
+  vue: {
+    html: {
+      root: path.resolve(__dirname, '../src/assets')
+    }
+  },
   context: path.resolve(__dirname, '../'),
   entry: {
     app: './src/main.js'
