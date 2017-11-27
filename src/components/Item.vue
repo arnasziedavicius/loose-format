@@ -7,7 +7,7 @@
       :alt="item.title" 
       class="item__image" />
     <div class="item__info">
-      <h3>{{ item.name }} – {{ item.latitude }} {{ item.longitude }}</h3>
+      <h3>{{ item.name }} – {{ item.lat }} {{ item.lng }}</h3>
       <div class="item__text" v-html="item.text"></div>
       <div class="item__info__bottom">
         <span class="play"><a href="#">Play</a></span>

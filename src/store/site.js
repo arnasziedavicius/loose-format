@@ -5,8 +5,8 @@ export default {
     items: [
       {
         'name': 'dj bedroom',
-        'latitude': '51.539226',
-        'longitude': '-0.052817',
+        'lat': '51.539226',
+        'lng': '-0.052817',
         'duration': '0:00:00',
         'file': '',
         'image': {
@@ -18,8 +18,8 @@ export default {
       },
       {
         'name': 'dj bedroom',
-        'latitude': '51.539226',
-        'longitude': '-0.052817',
+        'lat': '51.539226',
+        'lng': '-0.052817',
         'duration': '0:00:00',
         'file': '',
         'image': {
