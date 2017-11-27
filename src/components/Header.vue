@@ -17,6 +17,7 @@
 
   #logo {
     display: block;
+    width: 78.57%;
   }
 
   .header {
