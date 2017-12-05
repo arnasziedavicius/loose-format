@@ -7,7 +7,7 @@
       :alt="item.title" 
       class="item__image" />
     <div class="item__info">
-      <h3>{{ item.name }} – {{ item.lat }} {{ item.lng }}</h3>
+      <h3 class="item__title">{{ item.name }} – {{ item.lat }} {{ item.lng }}</h3>
       <div class="item__text" v-html="item.text"></div>
       <div class="item__info__bottom">
         <span class="play"><a href="#">Play</a></span>
@@ -33,7 +33,7 @@
     width: 58%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 6.2rem;
+    margin-bottom: 8.68rem;
 
     &__text {
       margin-bottom: 1em;
@@ -45,6 +45,18 @@
       margin-left: auto;
       margin-right: auto; 
       margin-bottom: 0.5em;
+    }
+
+    &__info {
+      &__bottom {
+        span {
+          margin-right: 32px;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+      }
     }
   }
 </style>

@@ -4,16 +4,17 @@
       <h1><img id="logo" src="../assets/loose-format-logo.svg" alt="logo" /></h1>
       <nav class="nav nav--main">
         <ul>
-          <li><a href="#">Soundcloud</a></li>
+          <li><a href="#">Info</a></li>
           <li><a href="mail:info@looseformat.com">Email</a></li>
         </ul>
       </nav>
     </div>
     <div class="header__bottom">
+      <!-- <span>Latest:</span> -->
       <ul class="mix-list">
         <li
-          v-for="(item, i) in items"><a href="">
-          <span class="count">{{ i + 1 }}</span> {{ item.name }} - {{ item.lat }}, {{ item.lng }}</a>
+          v-for="(item, i) in items">
+          <span class="count">{{ i + 1 }}</span> <a href="">{{ item.name }} - {{ item.lat }}, {{ item.lng }}</a>
         </li>
       </ul>
     </div>
@@ -45,7 +46,7 @@
     margin-left: @off;
     margin-right: @off;
     position: relative;
-    margin-bottom: 6.2rem;
+    margin-bottom: 7.44rem;
 
     h1 {
       float: left;
@@ -65,11 +66,17 @@
     }
   }
 
+  .mix-list {
+    column-count: 3;
+    column-gap: 10px;
+  }
+
   .count {
-    margin-right: 12px;
+    margin-right: 16px;
     background-image: url('../assets/circle.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    padding: 0px 7px 2px 7px;
+    padding: 0px 7px 1px 7px;
+    display: inline-block;
   }
 </style>
