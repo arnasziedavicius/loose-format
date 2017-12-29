@@ -14,7 +14,15 @@
       <ul class="mix-list">
         <li
           v-for="(item, i) in items">
-          <span class="count">{{ i + 1 }}</span> <a href="">{{ item.name }} - {{ item.lat }}, {{ item.lng }}</a>
+          <span class="count">{{ i + 1 }}</span> <router-link 
+          :to="{
+            name: 'item',
+            params: {
+              slug: item.slug,
+            }
+          }"
+          :data-slug="item.slug" 
+          @click.native="scrollToEl($event)">{{ item.name }} - {{ item.lat }}, {{ item.lng }}</router-link>
         </li>
       </ul>
     </div>
@@ -28,7 +36,18 @@
     computed: {
       ...mapState('site', [
         'items'
-      ])
+      ]),
+    },
+    methods: {
+      scrollToEl(event) {
+        const el = event.currentTarget;
+        const slug = el.getAttribute('data-slug');
+        const item = document.querySelectorAll(`.item[data-slug="${slug}"]`);
+        const scrollPos = item[0].offsetTop - 22;
+        setTimeout(() => {
+          window.scrollTo(0, scrollPos);
+        }, 100);
+      },      
     }
   }
 </script>
