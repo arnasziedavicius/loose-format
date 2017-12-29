@@ -14,6 +14,11 @@ const routes = [
     component: InfoView
   },
   {
+    name: 'item',
+    path: '/:slug',
+    component: HomeView
+  },
+  {
     name: '404',
     path: '*',
     redirect: {
