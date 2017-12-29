@@ -7,7 +7,7 @@
       :alt="item.title" 
       class="item__image" />
     <div class="item__info">
-      <h3 class="item__title"><a href="#">{{ item.name }} – {{ item.lat }}, {{ item.lng }}</a></h3>
+      <h3 class="item__title"><span class="dot"></span><a href="#">{{ item.name }} – {{ item.lat }}, {{ item.lng }}</a></h3>
       <div class="item__text" v-html="item.text"></div>
     </div>
   </div>
@@ -32,12 +32,25 @@
 </script>
 
 <style lang="less">
+  @import "../less/variables.less";
 
   .item {
     width: 58%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 8.68rem;
+    margin-left: @off;
+    margin-right: @off;
+    margin-bottom: 7.44rem;
+
+    &__title {
+      .dot {
+        border-radius: 100%;
+        background-color: white;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        margin-right: 16px;
+        vertical-align: bottom;
+      }
+    }
 
     &__text {
       margin-bottom: 1em;
@@ -45,9 +58,9 @@
 
     &__image {
       display: block;
-      width: 72%;
-      margin-left: auto;
-      margin-right: auto; 
+      width: 76%;
+      // margin-left: auto;
+      // margin-right: auto; 
       margin-bottom: 0.5em;
     }
 

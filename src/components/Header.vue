@@ -43,7 +43,7 @@
         const el = event.currentTarget;
         const slug = el.getAttribute('data-slug');
         const item = document.querySelectorAll(`.item[data-slug="${slug}"]`);
-        const scrollPos = item[0].offsetTop - 22;
+        const scrollPos = item[0].offsetTop - 10;
         setTimeout(() => {
           window.scrollTo(0, scrollPos);
         }, 100);
@@ -97,5 +97,6 @@
     background-size: 100% 100%;
     padding: 0px 7px 1px 7px;
     display: inline-block;
+    vertical-align: bottom;
   }
 </style>
