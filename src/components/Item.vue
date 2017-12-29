@@ -1,5 +1,5 @@
 <template>
-  <div class="item">
+  <div class="item" :data-slug="item.slug">
     <img 
       :src="item.image.src" 
       :width="item.image.width" 
@@ -7,12 +7,8 @@
       :alt="item.title" 
       class="item__image" />
     <div class="item__info">
-      <h3 class="item__title">{{ item.name }} – {{ item.lat }} {{ item.lng }}</h3>
+      <h3 class="item__title"><a href="#">{{ item.name }} – {{ item.lat }}, {{ item.lng }}</a></h3>
       <div class="item__text" v-html="item.text"></div>
-      <div class="item__info__bottom">
-        <span class="play"><a href="#">Play</a></span>
-        <span class="duration">{{ item.duration }}</span>
-      </div>
     </div>
   </div>
 </template>
@@ -23,7 +19,15 @@
       item: {
         type: [Array, Object]
       }
-    }
+    },
+    mounted() {
+      if (this.$route.params.slug === this.item.slug) {
+        const scrollPos = this.$el.offsetTop;
+        setTimeout(() => {
+          window.scrollTo(0, scrollPos);
+        }, 100);
+      }
+    },
   }
 </script>
 
@@ -49,7 +53,7 @@
 
     &__info {
       &__bottom {
-        span {
+        a {
           margin-right: 32px;
 
           &:last-of-type {
