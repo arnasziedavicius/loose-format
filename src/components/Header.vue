@@ -13,8 +13,9 @@
       <!-- <span>Latest:</span> -->
       <ul class="mix-list">
         <li
-          v-for="(item, i) in items">
-          <span class="count">{{ i + 1 }}</span> <router-link 
+          v-for="(item, i) in items"
+          :key="i">
+          <router-link 
           :to="{
             name: 'item',
             params: {
@@ -22,7 +23,8 @@
             }
           }"
           :data-slug="item.slug" 
-          @click.native="scrollToEl($event)">{{ item.name }} - {{ item.lat }}, {{ item.lng }}</router-link>
+          class="link"
+          @click.native="scrollToEl($event)"><span class="link__index">{{ i + 1 }}</span><span class="link__title">{{ item.name }} - {{ item.lat }}, {{ item.lng }}</span></router-link>
         </li>
       </ul>
     </div>
@@ -36,18 +38,18 @@
     computed: {
       ...mapState('site', [
         'items'
-      ]),
+      ])
     },
     methods: {
-      scrollToEl(event) {
-        const el = event.currentTarget;
-        const slug = el.getAttribute('data-slug');
-        const item = document.querySelectorAll(`.item[data-slug="${slug}"]`);
-        const scrollPos = item[0].offsetTop - 10;
+      scrollToEl (event) {
+        const el = event.currentTarget
+        const slug = el.getAttribute('data-slug')
+        const item = document.querySelectorAll(`.item[data-slug="${slug}"]`)
+        const scrollPos = item[0].offsetTop - 10
         setTimeout(() => {
-          window.scrollTo(0, scrollPos);
-        }, 100);
-      },      
+          window.scrollTo(0, scrollPos)
+        }, 100)
+      }
     }
   }
 </script>
@@ -65,7 +67,7 @@
     margin-left: @off;
     margin-right: @off;
     position: relative;
-    margin-bottom: 7.44rem;
+    margin-bottom: 6.24rem;
 
     h1 {
       float: left;
@@ -75,6 +77,13 @@
     &__top {
       margin-bottom: 0.5em;
     }
+
+    // &__bottom {
+    //   position: fixed;
+    //   top: 10px;
+    //   left: @off;
+    //   right: @off;
+    // }    
   }
 
   .nav {
@@ -90,13 +99,15 @@
     column-gap: 10px;
   }
 
-  .count {
-    margin-right: 16px;
-    background-image: url('../assets/circle.svg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding: 0px 7px 1px 7px;
-    display: inline-block;
-    vertical-align: bottom;
+  .link {
+    &__index {
+      margin-right: 16px;
+      background-image: url('../assets/circle.svg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      padding: 0px 7px 1px 7px;
+      display: inline-block;
+      vertical-align: bottom;
+    }
   }
 </style>

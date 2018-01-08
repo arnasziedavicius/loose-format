@@ -1,0 +1,59 @@
+@import "./variables.less";
+
+.link {
+  &__title {
+    &:after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 1px;
+      content: '';
+      background-color: transparent;
+    }
+  }
+
+  &:hover {
+    .link__title {
+      &:after {
+        background-color: @white;
+      }
+    }
+  }
+
+  &__dot {
+    border-radius: 100%;
+    background-color: @white;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 16px;
+    vertical-align: bottom;
+  }
+
+  &__loading {
+    animation: blink-animation .5s steps(5, start) infinite;
+  }
+
+  &__playing {
+    color: @green;
+
+    .link__dot {
+      background-color: @green;
+    }
+
+    &:hover {
+      .link__title {
+        &:after {
+          background-color: @green;
+        }
+      }
+    }
+  }
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}

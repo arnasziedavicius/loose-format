@@ -7,7 +7,7 @@
       :alt="item.title" 
       class="item__image" />
     <div class="item__info">
-      <h3 class="item__title"><span class="dot"></span><a href="#">{{ item.name }} – {{ item.lat }}, {{ item.lng }}</a></h3>
+      <a :href="item.file" class="link__button link"><span class="link__dot"></span><span class="link__title">{{ item.name }} – {{ item.lat }}, {{ item.lng }}</span></a>
       <div class="item__text" v-html="item.text"></div>
     </div>
   </div>
@@ -20,14 +20,14 @@
         type: [Array, Object]
       }
     },
-    mounted() {
+    mounted () {
       if (this.$route.params.slug === this.item.slug) {
-        const scrollPos = this.$el.offsetTop;
+        const scrollPos = this.$el.offsetTop
         setTimeout(() => {
-          window.scrollTo(0, scrollPos);
-        }, 100);
+          window.scrollTo(0, scrollPos)
+        }, 100)
       }
-    },
+    }
   }
 </script>
 
@@ -38,18 +38,10 @@
     width: 58%;
     margin-left: @off;
     margin-right: @off;
-    margin-bottom: 7.44rem;
+    margin-bottom: 6.24rem;
 
-    &__title {
-      .dot {
-        border-radius: 100%;
-        background-color: white;
-        width: 24px;
-        height: 24px;
-        display: inline-block;
-        margin-right: 16px;
-        vertical-align: bottom;
-      }
+    &__playing {
+      color: @green;
     }
 
     &__text {
@@ -59,8 +51,6 @@
     &__image {
       display: block;
       width: 76%;
-      // margin-left: auto;
-      // margin-right: auto; 
       margin-bottom: 0.5em;
     }
 
