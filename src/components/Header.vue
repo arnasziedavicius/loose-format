@@ -5,12 +5,10 @@
       <nav class="nav nav--main">
         <ul>
           <li><a href="#">Info</a></li>
-          <li><a href="mail:info@looseformat.com">Email</a></li>
         </ul>
       </nav>
     </div>
     <div class="header__bottom">
-      <!-- <span>Latest:</span> -->
       <ul class="mix-list">
         <li
           v-for="(item, i) in items"

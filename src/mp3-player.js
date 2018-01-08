@@ -38,10 +38,10 @@ const BasicMP3Player = function () {
 
   this.css = {
     // CSS class names appended to link during various states
-    sDefault: 'link__button', // default state
-    sLoading: 'link__loading',
-    sPlaying: 'link__playing',
-    sPaused: 'link__paused'
+    sDefault: 'button', // default state
+    sLoading: 'button__loading',
+    sPlaying: 'button__playing',
+    sPaused: 'button__paused'
   }
 
   // event + DOM utils

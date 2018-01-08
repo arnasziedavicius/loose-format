@@ -1,13 +1,15 @@
 <template>
   <div class="item" :data-slug="item.slug">
-    <img 
-      :src="item.image.src" 
-      :width="item.image.width" 
-      :height="item.image.height" 
-      :alt="item.title" 
-      class="item__image" />
+    <a :href="item.file" class="button">
+      <img 
+        :src="item.image.src" 
+        :width="item.image.width" 
+        :height="item.image.height" 
+        :alt="item.title" 
+        class="item__image" />
+      <span class="link"><span class="link__dot"></span><span class="link__title">{{ item.name }} – {{ item.lat }}, {{ item.lng }}</span></span>
+    </a>
     <div class="item__info">
-      <a :href="item.file" class="link__button link"><span class="link__dot"></span><span class="link__title">{{ item.name }} – {{ item.lat }}, {{ item.lng }}</span></a>
       <div class="item__text" v-html="item.text"></div>
     </div>
   </div>
@@ -40,18 +42,16 @@
     margin-right: @off;
     margin-bottom: 6.24rem;
 
-    &__playing {
-      color: @green;
-    }
-
     &__text {
       margin-bottom: 1em;
     }
 
     &__image {
-      display: block;
+      display: inline-block;
       width: 76%;
       margin-bottom: 0.5em;
+      font-size: 0;
+      line-height: 0;
     }
 
     &__info {

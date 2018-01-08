@@ -45,4 +45,5 @@
 
 <style lang="less">
   @import "../less/link.less";
+  @import "../less/button.less";
 </style>

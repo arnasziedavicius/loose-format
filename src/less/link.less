@@ -1,7 +1,11 @@
 @import "./variables.less";
 
 .link {
+  display: block;
+
   &__title {
+    position: relative;
+
     &:after {
       position: absolute;
       left: 0;
@@ -29,31 +33,5 @@
     display: inline-block;
     margin-right: 16px;
     vertical-align: bottom;
-  }
-
-  &__loading {
-    animation: blink-animation .5s steps(5, start) infinite;
-  }
-
-  &__playing {
-    color: @green;
-
-    .link__dot {
-      background-color: @green;
-    }
-
-    &:hover {
-      .link__title {
-        &:after {
-          background-color: @green;
-        }
-      }
-    }
-  }
-}
-
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
   }
 }
