@@ -42,6 +42,10 @@
     margin-right: @off;
     margin-bottom: 6.24rem;
 
+    .link {
+      display: block;
+    }
+
     &__text {
       margin-bottom: 1em;
     }

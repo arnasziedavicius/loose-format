@@ -1,0 +1,41 @@
+@import "./variables.less";
+
+.button {
+  &:hover {
+    .link__title {
+      &:after {
+        background-color: @white;
+      }
+    }
+  }      
+
+  &__loading {
+    .link {
+      animation: blink-animation .5s steps(5, start) infinite;
+    }
+  }
+
+  &__playing {
+    .link {
+      color: @green;
+
+      &__dot {
+        background-color: @green;
+      }
+    }
+
+    &:hover {
+      .link__title {
+        &:after {
+          background-color: @green;
+        }
+      }
+    }      
+  }
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}

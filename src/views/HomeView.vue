@@ -1,6 +1,11 @@
 <template>
   <div>
     <app-header></app-header>
+    <router-link 
+      :to="{
+        name: 'info'
+      }"
+      class="nav-link">Info</router-link>    
     <div class="item-wrap">
       <app-item 
         v-for="(item, i) in items"

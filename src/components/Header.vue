@@ -2,11 +2,6 @@
   <header class="header">
     <div class="header__top clear">
       <h1><img id="logo" src="../assets/loose-format-logo.svg" alt="logo" /></h1>
-      <nav class="nav nav--main">
-        <ul>
-          <li><a href="#">Info</a></li>
-        </ul>
-      </nav>
     </div>
     <div class="header__bottom">
       <ul class="mix-list">
