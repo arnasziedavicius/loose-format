@@ -12,6 +12,7 @@
         :item="item"
         :key="i"></app-item>
     </div>
+    <router-view v-if="isViewActive"></router-view>
   </div>
 </template>
 
@@ -32,7 +33,11 @@
     computed: {
       ...mapState('site', [
         'items'
-      ])
+      ]),
+      isViewActive () {
+        const active = this.$store.state.route.name === 'info'
+        return active
+      }
     },
     mounted () {
       // player setup

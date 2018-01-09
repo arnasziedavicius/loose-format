@@ -14,16 +14,37 @@
 </template>
 
 <script>
-
+  export default {
+    mounted() {
+      window.addEventListener('keydown', this.keyHandler)
+    },
+    destroyed() {
+      // destroy to key events
+      window.removeEventListener('keydown', this.keyHandler)
+    },
+    methods: {
+      close() {
+        this.$router.push('/')
+      },
+      keyHandler(e) {
+        // escape
+        if (e.keyCode === 27 || e.keyCode === 38) this.close()
+      }
+    }    
+  }
 </script>
 
 <style lang="less">
   @import "../less/variables.less";
 
   .info {
+    position: fixed;
     background-color: @red;
-    min-height: 100%;
-    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
     color: @black;
     padding: @off;
 
