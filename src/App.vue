@@ -27,6 +27,7 @@
     font-feature-settings: "kern" 1, "dlig" 1, "ss01" 1;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     font-size: 1.406vw;
+    line-height: 1.333;
     width: 100%;
     min-height: 100%;
     height: auto;
@@ -75,5 +76,6 @@
     top: @off;
     right: @off;
     z-index: 1;
+    display: block;
   }
 </style>

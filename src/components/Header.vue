@@ -70,13 +70,6 @@
     &__top {
       margin-bottom: 0.5em;
     }
-
-    // &__bottom {
-    //   position: fixed;
-    //   top: 10px;
-    //   left: @off;
-    //   right: @off;
-    // }    
   }
 
   .nav {

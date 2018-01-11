@@ -32,7 +32,7 @@ const BasicMP3Player = function () {
 
   this.config = {
     // configuration options
-    playNext: false, // stop after one sound, or play through list until end
+    playNext: true, // stop after one sound, or play through list until end
     autoPlay: false  // start playing the first sound right away
   }
 
@@ -109,7 +109,6 @@ const BasicMP3Player = function () {
     },
 
     pause: function () {
-      console.log('pause!')
       pl.removeClass(this._data.oLink, this._data.className)
       this._data.className = pl.css.sPaused
       pl.addClass(this._data.oLink, this._data.className)
@@ -126,6 +125,7 @@ const BasicMP3Player = function () {
       this._data.className = ''
       if (pl.config.playNext) {
         var nextLink = (pl.indexByURL[this._data.oLink.href] + 1)
+        console.log('next', nextLink)
         if (nextLink < pl.links.length) {
           pl.handleClick({ target: pl.links[nextLink] })
         }
@@ -176,7 +176,6 @@ const BasicMP3Player = function () {
       return true
     }
 
-    // sm._writeDebug('handleClick()')
     soundURL = (o.href)
     thisSound = self.getSoundByURL(soundURL)
 
@@ -188,7 +187,6 @@ const BasicMP3Player = function () {
       } else {
         // different sound
         thisSound.togglePause() // start playing current
-        // sm._writeDebug('sound different than last sound: ' + self.lastSound.id);
         if (self.lastSound) {
           self.stopSound(self.lastSound)
         }
@@ -220,19 +218,7 @@ const BasicMP3Player = function () {
         self.stopSound(self.lastSound)
       }
 
-      // const playPromise = thisSound.play()
-
       thisSound.play()
-
-      // if (playPromise !== undefined) {
-      //   playPromise.then(_ => {
-      //     // Automatic playback started!
-      //   })
-      //   .catch(error => {
-      //     // Auto-play was prevented
-      //     console.log(error)
-      //   })
-      // }
     }
 
     self.lastSound = thisSound // reference for next call
@@ -248,7 +234,6 @@ const BasicMP3Player = function () {
   }
 
   this.init = function () {
-    // sm._writeDebug('basicMP3Player.init()')
     let foundItems = 0
     const oLinks = document.getElementsByTagName('a')
 
@@ -268,7 +253,6 @@ const BasicMP3Player = function () {
         self.handleClick({ target: self.links[0], preventDefault: function () {} })
       }
     }
-    // sm._writeDebug('basicMP3Player.init(): Found ' + foundItems + ' relevant items.')
   }
 
   this.init()

@@ -6,27 +6,28 @@
       }"
       class="nav-link">Home</router-link>
     <div class="info__text fs-md">
-      <!-- <p>City light inspired mix series.</p> -->
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Contact: <a href="mailto:info@looseformat.com">info@looseformat.com</a></p>
+      <p>City light inspired mix series covering widely sourced forward-looking music. Timeless classics alongside fresh new sounds and a lot in-between.</p>
+      <p>Left click, kick back and play; right click – save and take it with you. Check back later as we make monthly updates as well.</p>
+      <p>Hola: <a href="mailto:hola@looseformat.com">hola@looseformat.com</a></p>
     </div>
+    <img src="/static/images/boy.png" alt="" class="info__image" />
   </div>
 </template>
 
 <script>
   export default {
-    mounted() {
+    mounted () {
       window.addEventListener('keydown', this.keyHandler)
     },
-    destroyed() {
+    destroyed () {
       // destroy to key events
       window.removeEventListener('keydown', this.keyHandler)
     },
     methods: {
-      close() {
+      close () {
         this.$router.push('/')
       },
-      keyHandler(e) {
+      keyHandler (e) {
         // escape
         if (e.keyCode === 27 || e.keyCode === 38) this.close()
       }
@@ -61,6 +62,15 @@
     &__text {
       font-family: "Times New Roman", Times, serif;
       width: 58%;
+    }
+
+    &__image {
+      display: block;
+      position: absolute;
+      bottom: 10%;
+      right: 12%;
+      width: 28%;
+      height: auto;
     }
   }
 </style>
