@@ -31,7 +31,7 @@
         // escape
         if (e.keyCode === 27 || e.keyCode === 38) this.close()
       }
-    }    
+    }
   }
 </script>
 
