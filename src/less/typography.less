@@ -61,22 +61,17 @@ b, strong {
 a {
   color: @white;
   text-decoration: none;
-  position: relative;
-
-  &:after {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -1px;
-    height: 1px;
-    content: '';
-    background-color: transparent;
-  }
+  border-bottom: 1px solid transparent;
 
   &:hover {
-    &:after {
-      background-color: @white;
-    }
-  }  
+    border-color: @white;
+  }
+
+  &.black {
+    color: @black;
+
+    &:hover {
+      border-color: @black;
+    }    
+  }
 }
