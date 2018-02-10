@@ -1,6 +1,8 @@
 <template>
   <div class="item" :data-slug="item.slug">
-    <a :href="item.file" class="button">
+    <a 
+      :href="item.file" 
+      class="item__link button">
       <img 
         :src="item.image.src" 
         :width="item.image.width" 
@@ -42,8 +44,14 @@
     margin-right: @off;
     margin-bottom: 6.24rem;
 
-    .link {
+    .link,
+    &__link {
       display: block;
+    }
+
+    &__link {
+      margin-bottom: 1em;
+      border-bottom: none;
     }
 
     &__text {

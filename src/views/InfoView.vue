@@ -1,16 +1,11 @@
 <template>
   <div id="info" class="info">
-    <router-link 
-      :to="{
-        name: 'home'
-      }"
-      class="nav-link">Home</router-link>
     <div class="info__text fs-md">
       <p>City light inspired mix series covering widely sourced forward-looking music. Timeless classics alongside fresh new sounds and a lot in-between.</p>
       <p>Left click, kick back and play; right click – save and take it with you. Check back later as we make monthly updates as well.</p>
       <p>Hola: <a href="mailto:hola@looseformat.com">hola@looseformat.com</a></p>
     </div>
-    <img src="/static/images/boy.png" alt="" class="info__image" />
+    <img src="/static/images/boy.png" alt="Loose Format" class="info__image" />
   </div>
 </template>
 
@@ -53,9 +48,7 @@
       color: @black;
 
       &:hover {
-        &:after {
-          background-color: @black;
-        }
+        border-color: @black;
       }        
     }
 

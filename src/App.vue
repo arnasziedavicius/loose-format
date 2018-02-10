@@ -1,12 +1,27 @@
 <template>
   <div id="app">
+    <router-link 
+      :to="{ name: infoLinkName }"
+      id="info-link"
+      :class="{ 'black' : isOnInfo }">{{ infoLinkTitle }}</router-link>
     <router-view/>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'app'
+    name: 'app',
+    computed: {
+      isOnInfo() {
+        return this.$route.name === 'info';
+      },      
+      infoLinkName() {
+        return this.$route.name === 'home' ? 'info' : 'home';
+      },      
+      infoLinkTitle() {
+        return this.$route.name === 'home' ? 'Info' : 'Home';
+      }
+    }
   }
 </script>
 
@@ -33,31 +48,23 @@
     height: auto;
   }
 
-  ::-webkit-input-placeholder {
-    color: @white;
-  }
-  :-moz-placeholder { /* Firefox 18- */
-    color: @white;
-  }
-  ::-moz-placeholder {  /* Firefox 19+ */
-    color: @white;
-  }
+  ::-webkit-input-placeholder,
+  :-moz-placeholder,
+  ::-moz-placeholder,
   :-ms-input-placeholder {
     color: @white;
   }
+
   ::-moz-selection {
     background: @red;
     color: @black;
   }
-  ::-webkit-selection {
-    background: rgba(255, 0, 0, 1);
-    color: @black;
-  }
+  ::-webkit-selection,
   ::selection {
     background: rgba(255, 0, 0, 1);
     color: @black;
   }
-  
+
   img {
     width: auto;
     height: auto;
@@ -71,11 +78,11 @@
     list-style: none;
   }
 
-  .nav-link {
+  #info-link {
     position: fixed;
     top: @off;
     right: @off;
-    z-index: 1;
+    z-index: 9;
     display: block;
   }
 </style>
