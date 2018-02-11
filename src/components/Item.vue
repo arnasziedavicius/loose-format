@@ -6,7 +6,7 @@
       <img 
         :src="item.image.src" 
         :width="item.image.width" 
-        :height="item.image.height" 
+        :height="item.image.height"
         :alt="item.title" 
         class="item__image" />
       <span class="link"><span class="link__dot"></span><span class="link__title">{{ item.name }} – {{ item.lat }}, {{ item.lng }}</span></span>
@@ -39,10 +39,11 @@
   @import "../less/variables.less";
 
   .item {
-    width: 58%;
-    margin-left: @off;
-    margin-right: @off;
-    margin-bottom: 6.24rem;
+    margin: 0 @off 5.2rem;
+
+    .mq-md({
+      width: 58%;
+    });
 
     .link,
     &__link {
@@ -60,10 +61,14 @@
 
     &__image {
       display: inline-block;
-      width: 76%;
+      width: 77.34vw;
       margin-bottom: 0.5em;
       font-size: 0;
       line-height: 0;
+
+      .mq-md({
+        width: 76%;
+      });
     }
 
     &__info {

@@ -1,7 +1,7 @@
 <template>
   <div id="info" class="info">
     <div class="info__text fs-md">
-      <p>City light inspired mix series covering widely sourced forward-looking music. Timeless classics alongside fresh new sounds and a lot in-between.</p>
+      <p>City light inspired mix series covering widely sourced, forward-looking music. Timeless classics alongside fresh new sounds and a lot in-between.</p>
       <p>Left click, kick back and play; right click – save and take it with you. Check back later as we make monthly updates as well.</p>
       <p>Hola: <a href="mailto:hola@looseformat.com">hola@looseformat.com</a></p>
     </div>

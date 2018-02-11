@@ -60,10 +60,9 @@
     margin-left: @off;
     margin-right: @off;
     position: relative;
-    margin-bottom: 6.24rem;
+    margin-bottom: 6.5rem;
 
     h1 {
-      float: left;
       display: block;
     }
 
@@ -81,8 +80,10 @@
   }
 
   .mix-list {
-    column-count: 3;
-    column-gap: 10px;
+    .mq-md({
+      column-count: 3;
+      column-gap: 10px;
+    });    
   }
 
   .link {
