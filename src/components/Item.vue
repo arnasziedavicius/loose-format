@@ -66,6 +66,10 @@
       font-size: 0;
       line-height: 0;
 
+      .mq-sm({
+        width: 50%;
+      });
+
       .mq-md({
         width: 76%;
       });

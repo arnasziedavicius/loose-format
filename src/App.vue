@@ -47,6 +47,10 @@
     min-height: 100%;
     height: auto;
 
+    .mq-sm({
+      font-size: 2.343vw;// 18px / 768px
+    });
+
     .mq-md({
       font-size: 1.406vw;// 18px / 1280px
     });
