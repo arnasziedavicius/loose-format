@@ -26,29 +26,29 @@
 </script>
 
 <style lang="less">
-  @import "./less/normalize.less";
-  @import "./less/typography.less";
-  @import "./less/variables.less";
-  @import "./less/helpers.less";
+  @import './less/normalize.less';
+  @import './less/typography.less';
+  @import './less/variables.less';
+  @import './less/helpers.less';
 
   html, body {
     background: @black;
     color: @white;
-    font-family: HelveticaNeueMedium, HelveticaNeue-Medium, "Helvetica Neue Medium", HelveticaNeue, "Helvetica Neue", TeXGyreHerosRegular, Helvetica, Tahoma, Geneva, Arial, sans-serif;
+    font-family: HelveticaNeueMedium, HelveticaNeue-Medium, 'Helvetica Neue Medium', HelveticaNeue, 'Helvetica Neue', TeXGyreHerosRegular, Helvetica, Tahoma, Geneva, Arial, sans-serif;
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    font-feature-settings: "kern" 1, "dlig" 1, "ss01" 1;
+    font-feature-settings: 'kern' 1, 'dlig' 1, 'ss01' 1;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    font-size: 4.266vw;
+    font-size: 4.266vw;// 16px / 375px
     line-height: 1.3;
     width: 100%;
     min-height: 100%;
     height: auto;
 
     .mq-md({
-      font-size: 1.406vw;
+      font-size: 1.406vw;// 18px / 1280px
     });
   }
 

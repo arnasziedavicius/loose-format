@@ -88,11 +88,11 @@
 
   .link {
     &__index {
-      margin-right: 16px;
+      margin-right: 0.888rem;
       background-image: url('../assets/circle.svg');
       background-repeat: no-repeat;
       background-size: 100% 100%;
-      padding: 0px 7px 1px 7px;
+      padding: 0px 0.388rem 0.055rem 0.388rem;
       display: inline-block;
       vertical-align: bottom;
     }

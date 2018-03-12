@@ -61,7 +61,7 @@
 
     &__image {
       display: inline-block;
-      width: 77.34vw;
+      width: 77.34%;
       margin-bottom: 0.5em;
       font-size: 0;
       line-height: 0;

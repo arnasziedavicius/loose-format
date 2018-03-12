@@ -30,8 +30,8 @@
   }
 </script>
 
-<style lang="less">
-  @import "../less/variables.less";
+<style lang='less'>
+  @import '../less/variables.less';
 
   .info {
     position: fixed;
@@ -42,7 +42,13 @@
     left: 0;
     z-index: 1;
     color: @black;
-    padding: @off;
+    padding: @off + 2.554rem @off @off;
+    overflow-y: scroll;
+
+    .mq-md({
+      padding: @off;
+      overflow-y: hidden;
+    });    
 
     a {
       color: @black;
@@ -53,17 +59,27 @@
     }
 
     &__text {
-      font-family: "Times New Roman", Times, serif;
-      width: 58%;
+      font-family: 'Times New Roman', Times, serif;
+      margin-bottom: 1.15em;
+
+      .mq-md({
+        margin-bottom: 0;
+        width: 58%;
+      });
     }
 
     &__image {
       display: block;
-      position: absolute;
-      bottom: 10%;
-      right: 12%;
-      width: 28%;
       height: auto;
+      width: 77.34%;
+
+      .mq-md({
+        width: auto;
+        position: absolute;
+        bottom: 10%;
+        right: 12%;
+        width: 28%;
+      });
     }
   }
 </style>
