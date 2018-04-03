@@ -16,10 +16,11 @@
         return this.$route.name === 'info'
       },
       infoLinkName () {
-        return this.$route.name === 'home' ? 'info' : 'home'
+        console.log(this.$route.name);
+        return this.$route.name === 'info' ? 'home' : 'info'
       },
       infoLinkTitle () {
-        return this.$route.name === 'home' ? 'Info' : 'Home'
+        return this.$route.name === 'info' ? 'Home' : 'Info'
       }
     }
   }
