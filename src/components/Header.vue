@@ -38,7 +38,9 @@
         const el = event.currentTarget
         const slug = el.getAttribute('data-slug')
         const item = document.querySelectorAll(`.item[data-slug="${slug}"]`)
-        const scrollPos = item[0].offsetTop - 10
+        // get offset based on item left offset
+        const adjust = item[0].offsetLeft
+        const scrollPos = item[0].offsetTop - adjust
         setTimeout(() => {
           window.scrollTo(0, scrollPos)
         }, 100)

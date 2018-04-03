@@ -26,8 +26,9 @@
     },
     mounted () {
       if (this.$route.params.slug === this.item.slug) {
-        const scrollPos = this.$el.offsetTop
+        const adjust = this.$el.offsetLeft
         setTimeout(() => {
+          const scrollPos = this.$el.offsetTop - adjust
           window.scrollTo(0, scrollPos)
         }, 100)
       }
