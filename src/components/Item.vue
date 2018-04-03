@@ -72,10 +72,6 @@
     }
 
     &__inner {
-      // margin-bottom: 0.5em;
-      // margin-bottom: 2.3rem;
-      // font-size: 0;
-      // line-height: 0;
       position: relative;
 
       &:after {
