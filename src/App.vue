@@ -16,7 +16,6 @@
         return this.$route.name === 'info'
       },
       infoLinkName () {
-        console.log(this.$route.name);
         return this.$route.name === 'info' ? 'home' : 'info'
       },
       infoLinkTitle () {
