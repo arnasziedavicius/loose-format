@@ -3,13 +3,15 @@
     <a 
       :href="item.file" 
       class="item__link button">
-      <img 
-        :src="item.image.src" 
-        :width="item.image.width" 
-        :height="item.image.height"
-        :alt="item.title" 
-        class="item__image" />
-      <span class="link"><span class="link__dot"></span><span class="link__title">{{ item.name }} – {{ item.lat }}, {{ item.lng }}</span></span>
+      <div class="item__inner">
+        <img 
+          :src="item.image.src" 
+          :width="item.image.width" 
+          :height="item.image.height"
+          :alt="item.title"
+          class="item__image" />
+        <span class="item__title link"><span class="link__dot"></span><span class="link__title">{{ item.name }} – {{ item.lat }}, {{ item.lng }}</span></span>          
+      </div>
     </a>
     <div class="item__info">
       <div class="item__text" v-html="item.text"></div>
@@ -52,20 +54,9 @@
     }
 
     &__link {
-      margin-bottom: 1em;
+      margin-bottom: 2.55em;
       border-bottom: none;
-    }
-
-    &__text {
-      margin-bottom: 1em;
-    }
-
-    &__image {
-      display: inline-block;
       width: 77.34%;
-      margin-bottom: 0.5em;
-      font-size: 0;
-      line-height: 0;
 
       .mq-sm({
         width: 50%;
@@ -75,6 +66,38 @@
         width: 76%;
       });
     }
+
+    &__text {
+      margin-bottom: 1em;
+    }
+
+    &__inner {
+      // margin-bottom: 0.5em;
+      // margin-bottom: 2.3rem;
+      // font-size: 0;
+      // line-height: 0;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
+    }
+
+    &__image,
+    &__title {
+      position: absolute;
+      left: 0;
+    }
+
+    &__image {
+      top: 0;
+    }
+
+    &__title {
+      bottom: -1.55rem;
+    }    
 
     &__info {
       &__bottom {
