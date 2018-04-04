@@ -15,12 +15,16 @@
   }
 
   &__dot {
-    border-radius: 100%;
-    background-color: @white;
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    margin-right: 16px;
-    vertical-align: bottom;
+    display: none;
+
+    .mq-sm({
+      border-radius: 100%;
+      background-color: @white;
+      width: 1.3rem;
+      height: 1.3rem;
+      display: inline-block;
+      margin-right: 0.888rem;
+      vertical-align: bottom;
+    });    
   }
 }

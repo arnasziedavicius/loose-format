@@ -54,7 +54,7 @@
     }
 
     &__link {
-      margin-bottom: 2.55em;
+      margin-bottom: 2.8em;
       border-bottom: none;
       width: 77.34%;
 
@@ -92,7 +92,17 @@
     }
 
     &__title {
-      bottom: -1.55rem;
+      bottom: -1.8rem;
+      width: 95.734vw;
+
+      .mq-sm({
+        width: 97.657vw;
+      });
+
+      .mq-md({
+        width: auto;
+      });      
+      
     }    
 
     &__info {

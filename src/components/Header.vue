@@ -62,14 +62,28 @@
     margin-left: @off;
     margin-right: @off;
     position: relative;
-    margin-bottom: 6.5rem;
+    margin-bottom: 5.2rem;
+
+    .mq-sm({
+      margin-bottom: 6.5rem;
+    });   
 
     h1 {
       display: block;
     }
 
     &__top {
-      margin-bottom: 0.5em;
+      .mq-sm({
+        margin-bottom: 0.5em;
+      });      
+    }
+
+    &__bottom {
+      display: none;
+
+      .mq-sm({
+        display: block;
+      });
     }
   }
 
