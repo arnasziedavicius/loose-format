@@ -5,8 +5,13 @@ import { sync } from 'vuex-router-sync'
 import App from './App'
 import router from './router'
 import store from './store'
+import VueAnalytics from 'vue-analytics'
 
 Vue.config.productionTip = false
+
+Vue.use(VueAnalytics, {
+  id: 'UA-117162601-1'
+})
 
 // sync the router with the vuex store.
 // this registers `store.state.route`
