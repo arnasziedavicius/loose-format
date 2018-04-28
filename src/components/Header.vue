@@ -17,7 +17,7 @@
           }"
           :data-slug="item.slug" 
           class="link"
-          @click.native="scrollToEl($event)"><span class="link__index">{{ i + 1 }}</span><span class="link__title">{{ item.name }} - {{ item.lat }}, {{ item.lng }}</span></router-link>
+          @click.native="scrollToEl($event)"><span class="link__index">{{ reverseIndex(i) }}</span><span class="link__title">{{ item.name }} - {{ item.lat }}, {{ item.lng }}</span></router-link>
         </li>
       </ul>
     </div>
@@ -31,9 +31,15 @@
     computed: {
       ...mapState('site', [
         'items'
-      ])
+      ]),
+      itemsReverse () {
+        return this.items.reverse()
+      }
     },
     methods: {
+      reverseIndex (index) {
+        return this.items.length - index
+      },
       scrollToEl (event) {
         const el = event.currentTarget
         const slug = el.getAttribute('data-slug')
