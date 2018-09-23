@@ -13,13 +13,8 @@ const routes = [
         name: 'info',
         path: 'info',
         component: InfoView
-      },
+      }
     ]
-  },
-  {
-    name: 'submit',
-    path: '/submit',
-    component: SubmitView,
   },
   {
     name: 'item',
