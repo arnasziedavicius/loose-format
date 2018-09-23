@@ -1,6 +1,5 @@
 import HomeView from '../views/HomeView.vue'
 import InfoView from '../views/InfoView.vue'
-import SubmitView from '../views/SubmitView.vue'
 
 // route-level code splittings
 const routes = [
