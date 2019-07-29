@@ -4,6 +4,7 @@
       <p>City light inspired mix series covering widely sourced, forward-looking music. Timeless classics alongside fresh new sounds and a lot in-between.</p>
       <p>Left click, kick back and play; right click – save and take it with you. Check back later as we make monthly updates as well.</p>
       <p><a href="mailto:hola@looseformat.com">hola@looseformat.com</a></p>
+      <p><a href="https://soundcloud.com/looseformat" target="_blank">SoundCloud</a>, <a href="https://www.instagram.com/looseformat/" target="_blank">Instagram</a>, <a href="https://www.facebook.com/looseformat" target="_blank">Facebook</a></p>
     </div>
     <img src="/static/images/boy.png" alt="Loose Format" class="info__image" />
   </div>
