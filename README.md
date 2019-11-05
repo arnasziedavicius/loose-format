@@ -1,6 +1,6 @@
 # loose-format
 
-A static Nuxt.js app for Loose Format mix series.
+A static Nuxt.js app for Loose Format mix series 🎚️.
 
 ## Install
 
