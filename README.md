@@ -1,21 +1,32 @@
 # loose-format
 
-> A Vue.js project
+A static Nuxt.js app for Loose Format mix series.
+
+## Install
+
+To install use either of the following commands:
+
+```
+$ yarn
+# or
+$ npm install
+```
 
 ## Build Setup
 
-``` bash
-# install dependencies
-npm install
+This project uses Webpack for module bundling. You can run any of the following commands using npm if preferred.
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+Serve the app in development mode at localhost:3000.
+```
+$ yarn run dev
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Run build processes for production.
+```
+$ yarn run build
+```
+
+Start the production application.
+```
+$ yarn start
+```
